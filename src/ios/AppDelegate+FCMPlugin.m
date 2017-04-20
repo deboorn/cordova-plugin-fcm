@@ -231,6 +231,7 @@ fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
                                                            options:0
                                                              error:&error];
         [FCMPlugin.fcmPlugin notifyOfMessage:jsonData];
+        lastPush = jsonData;
 
     // app is in background
     }
